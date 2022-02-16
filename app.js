@@ -15,7 +15,7 @@ $button.click( () => {
         console.log(data.features[0]);
         let long = data.features[0].geometry.coordinates[0];
         let lat = data.features[0].geometry.coordinates[1];
-        var map = L.map('map').setView([lat, long], 13);
+        var map = L.map('map').setView([lat, long], 11);
 
         var tiles = L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
             maxZoom: 18,
@@ -33,6 +33,7 @@ $button.click( () => {
 
     $("#chosen").text($country.find(":selected").text());
     $("#flag").attr("src", `https://countryflagsapi.com/png/${country}`);
+    $button.attr("class", "btn btn-success")
     event.preventDefault();
  });
 
