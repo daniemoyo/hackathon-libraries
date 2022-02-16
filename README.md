@@ -1,2 +1,2 @@
 # hackathon-libraries
-learning how to work with libries: cdn, apis 
+learning how to work with libraries: cdn, apis 
