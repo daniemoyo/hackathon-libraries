@@ -1,13 +1,10 @@
+const $city = $("#cityId"); // The value of the selected City
+const $country = $("#countryId"); // The value of the selected Country
+
+const $button = $("#submit");// Button Search
 
 
-const $value1 =$("#gds-cr-one :selected").text(); // The text content of the selected option
-const $city = $("#cityId"); // The value of the selected option City
-const $country = $("#countryId"); // The value of the selected option Country
-
-const $button = $("#submit");
-
-
-$button.click( () => {
+$button.click( (event) => {
     var container = L.DomUtil.get('map');
             if(container != null){
             container._leaflet_id = null;
@@ -16,7 +13,7 @@ $button.click( () => {
     let country = $country.find(":selected").text();
     
     $.get(`https://nominatim.openstreetmap.org/search?city=${input}&format=geojson`, (data) => {
-        console.log(data.features[0]);
+        
         let long = data.features[0].geometry.coordinates[0];
         let lat = data.features[0].geometry.coordinates[1];
         var map = L.map('map').setView([lat, long], 11);

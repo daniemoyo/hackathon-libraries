@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
     <script src="//geodata.solutions/includes/countrystatecity.js"></script>
@@ -19,7 +18,7 @@
 <body>
     <div class="container">
       <div id="title" class="col">
-        <h1>Checking Out Countries</h1>
+        <h2>Checking Out Countries</h2>
       </div>
         <div class="row">
           <div class="col">  
@@ -45,13 +44,14 @@
              </form>
           </div>
           <div class="col-3">
-            <h4>Chosen Country</h4>
-            <div id="chosen" class="col"></div>
+            <p>Chosen Country</p>
+            <div class="col"><h4 id="chosen" ></h4></div>
             <div><img id="flag" class="col"></div>
           </div>
           <div class="col-5">
             <div id="map"></div>
           </div>
         </div>
+    </div>
 </body>
 </html>
