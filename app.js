@@ -33,7 +33,6 @@ $button.click( () => {
         .bindPopup(`You are seeing ${input}`)
         .openPopup();
 
-        // map.invalidateSize();
      });
 
     $("#chosen").text($country.find(":selected").text());
