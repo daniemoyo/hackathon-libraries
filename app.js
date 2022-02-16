@@ -8,6 +8,10 @@ const $button = $("#submit");
 
 
 $button.click( () => {
+    var container = L.DomUtil.get('map');
+            if(container != null){
+            container._leaflet_id = null;
+            }
     let input = $city.find(":selected").text();
     let country = $country.find(":selected").text();
     
@@ -29,11 +33,12 @@ $button.click( () => {
         .bindPopup(`You are seeing ${input}`)
         .openPopup();
 
+        // map.invalidateSize();
      });
 
     $("#chosen").text($country.find(":selected").text());
     $("#flag").attr("src", `https://countryflagsapi.com/png/${country}`);
-    $button.attr("class", "btn btn-success")
+    $button.attr("class", "btn btn-success");
     event.preventDefault();
  });
 
