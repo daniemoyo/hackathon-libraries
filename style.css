@@ -1,0 +1,17 @@
+.container{
+    margin: 20px 20px;
+    /* border: 1px dotted red; */
+}
+#map { 
+    height: 300px; 
+    border: 1px solid green;
+    margin-bottom: 20px;
+}
+
+#title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin: 5px 5px; 
+}
